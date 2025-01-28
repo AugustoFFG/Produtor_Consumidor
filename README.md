@@ -15,8 +15,10 @@ O código está organizado em várias funções que tratam do comportamento do p
       - Abre o arquivo `buffer.txt` em modo de escrita (`"w"`).
       - Preenche o arquivo com 10 números aleatórios gerados pela função `rand()`.
       - Fecha o arquivo após o preenchimento.
-      - ```c
-        void buffer(){
+## Função `buffer()`
+
+```c
+void buffer(){
     FILE *buffer = fopen("buffer.txt", "w");
     
     if(buffer == NULL){
@@ -29,7 +31,7 @@ O código está organizado em várias funções que tratam do comportamento do p
     }
     
     fclose(buffer);
-}```
+}
 
 
 2. **`tranca()`**
