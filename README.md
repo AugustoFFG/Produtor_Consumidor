@@ -15,24 +15,6 @@ O código está organizado em várias funções que tratam do comportamento do p
       - Abre o arquivo `buffer.txt` em modo de escrita (`"w"`).
       - Preenche o arquivo com 10 números aleatórios gerados pela função `rand()`.
       - Fecha o arquivo após o preenchimento.
-## Função `buffer()`
-
-```c
-void buffer(){
-    FILE *buffer = fopen("buffer.txt", "w");
-    
-    if(buffer == NULL){
-        printf("Erro ao abrir o arquivo!");
-        exit(1);
-    }
-    
-    for(int i = 0; i < 10; i++){
-        fprintf(buffer, "%d\n", rand() % 100);
-    }
-    
-    fclose(buffer);
-}
-
 
 2. **`tranca()`**
     - Função responsável por **bloquear** o arquivo `buffer.txt` para garantir que apenas um processo (produtor ou consumidor) possa acessá-lo por vez.
